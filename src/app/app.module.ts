@@ -4,10 +4,12 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { Geolocation } from '@ionic-native/geolocation';
 import { MyApp } from './app.component';
-
+import { HttpClientModule } from '@angular/common/http'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { CepServiceProvider } from '../providers/cep-service/cep-service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule,
+    HttpModule  
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -25,7 +29,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     Geolocation,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CepServiceProvider
   ]
 })
 export class AppModule {}

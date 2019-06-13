@@ -24,7 +24,9 @@ export class MyApp {
       { title: 'Mapa Simples', component: 'Mapa_2Page' },
       { title: 'Mapa com JavaScript', component: 'Mapa_3Page' },
       { title: 'Mapa com GeoLocalização', component: 'Mapa_4Page' },
-      { title: 'Mapa com Rotas', component: 'Mapa_5Page' }
+      { title: 'Mapa com Rotas', component: 'Mapa_5Page' },
+      { title: 'Mapa com CEP ', component: 'Mapa_6Page' },
+      { title: 'Minha Localiza e CEP ', component: 'Mapa_7Page' }
   
     ];
 

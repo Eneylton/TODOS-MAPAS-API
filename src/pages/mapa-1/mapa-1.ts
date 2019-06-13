@@ -24,6 +24,9 @@ export class Mapa_1Page {
     this.geolocation.getCurrentPosition().then((resp) => {
     this.lat1 = resp.coords.latitude;
     this.lng1 = resp.coords.longitude;
+
+    console.log(this.lat1);
+
      }).catch((error) => {
        console.log('Error getting location', error);
      });
