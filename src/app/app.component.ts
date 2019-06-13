@@ -3,8 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +11,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = 'Mapa_1Page';
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,8 +20,12 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Longitude e Latitude', component: 'Mapa_1Page' },
+      { title: 'Mapa Simples', component: 'Mapa_2Page' },
+      { title: 'Mapa com JavaScript', component: 'Mapa_3Page' },
+      { title: 'Mapa com GeoLocalização', component: 'Mapa_4Page' },
+      { title: 'Mapa com Rotas', component: 'Mapa_5Page' }
+  
     ];
 
   }
